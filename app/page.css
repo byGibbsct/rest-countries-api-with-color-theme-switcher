@@ -1,0 +1,33 @@
+body {
+  font-size: 14px;
+}
+
+.navbar {
+  background: var(--elements-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 80px;
+}
+
+.navbar__heading {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.navbar__theme-switcher {
+  color: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: inherit;
+}
+
+.theme-switcher__text {
+  font-size: 15px;
+  font-weight: 600;
+}
