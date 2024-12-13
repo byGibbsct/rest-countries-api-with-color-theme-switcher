@@ -1,14 +1,14 @@
 
-export default function CountryCard() {
+export default function CountryCard(props) {
   return (
     <article className="card">
-      <img src="https://flagcdn.com/w320/de.png" alt="germany flag"/>
+      <img className="card__flag" src={props.flagUrl} alt={`${props.name} flag`}/>
       <div className="card__country-details">
-        <h2 className="card__country-name">Germany</h2>
+        <h2 className="card__country-name">{props.name}</h2>
         <div className="card__country-info">
-          <p className="country-info__data"><span>Population:</span> 81,770,90</p>
-          <p className="country-info__data"><span>Region:</span> Europe</p>
-          <p className="country-info__data"><span>Capital:</span> Berlin</p>
+          <p className="country-info__data"><span>Population:</span> {props.population}</p>
+          <p className="country-info__data"><span>Region:</span> {props.region}</p>
+          <p className="country-info__data"><span>Capital:</span> {props.capital}</p>
         </div>
       </div>
     </article>

@@ -1,13 +1,15 @@
 import "./page.css";
 
 import NavBar from "./components/NavBar";
-import CountryCard from "./components/CountryCard";
+import Display from "./components/Display";
 
 export default function Home() {
   return (
     <>
       <NavBar />
-      <CountryCard />
+      <main>
+        <Display />
+      </main>
     </>
   );
 }

@@ -32,12 +32,24 @@ body {
   font-weight: 600;
 }
 
+.display {
+  display: grid;
+  grid-template-columns: repeat(4, 264px);
+  gap: 74px;
+  padding: 50px 80px;
+}
+
 .card {
   background: var(--elements-color);
   border-radius: 0 0 5px 5px;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
   display: inline-block;
-  max-width: 265px;
+}
+
+.card__flag {
+  height: 160px;
+  width: 264px;
+  object-fit: cover;
 }
 
 .card__country-details {
