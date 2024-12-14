@@ -2,6 +2,12 @@ body {
   font-size: 14px;
 }
 
+a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
 .navbar {
   background: var(--elements-color);
   display: flex;
@@ -153,4 +159,107 @@ body {
 
 .region-options__list li {
   cursor: pointer;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+  font-size: 16px;
+  padding: 80px;
+}
+
+.panel__back-btn {
+  background: var(--elements-color);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  padding: 12px 32px;
+}
+
+.panel__back-btn a {
+  color: var(--text-color);
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.panel__country {
+ display: flex;
+ gap: 145px;
+}
+
+.panel__country-flag {
+  min-width: 560px;
+  max-height: 400px
+}
+
+.panel__country-info {
+  display: grid;
+  grid-template: max-content 32px max-content 75px max-content  / auto auto;
+  column-gap: 115px;
+  padding: 50px 0;
+}
+
+.country-info__name {
+  font-size: 30px;
+  font-weight: 900;
+  grid-row: 1;
+  grid-column: span 2;
+}
+
+.country-info__geography {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.country-info__geography span {
+  font-weight: 600;
+}
+
+.country-info__misc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.country-info__border-countries {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  grid-row: 5;
+  grid-column: span 2;
+}
+
+.border-countires__heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.border-countries__list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, max-content);
+  list-style: none;
+  padding: 0;
+}
+
+.border-countries__list li {
+  background: var(--elements-color);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+  padding: 5px 10px;
+  width: 100px;
+}
+
+.border-countries__list a {
+  display: block;
+  font-size: 14px;
 }
