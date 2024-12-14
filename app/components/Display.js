@@ -1,8 +1,10 @@
 import CountryCard from "./CountryCard";
 
-import * as data from "../data.json";
+import data from "../data.json";
+
 
 export default function Display() {
+
   return (
     <div className="display">
       {
