@@ -8,6 +8,10 @@ body {
   font-family: 'Nunito Sans Variable', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   body {
     --background-color: hsl(0, 0%, 98%);
