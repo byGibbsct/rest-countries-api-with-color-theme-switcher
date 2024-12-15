@@ -2,6 +2,9 @@ body {
   --background-color: hsl(207, 26%, 17%);
   --elements-color: hsl(209, 23%, 22%);
   --text-color: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 100%);
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --cards-shadow-color: rgba(0, 0, 0, 0.05);
 
   background: var(--background-color);
   color: var(--text-color);
@@ -17,4 +20,5 @@ body {
   --elements-color: hsl(0, 0%, 100%);
   --text-color: hsl(200, 15%, 8%);
   --input-color: hsl(0, 0%, 52%);
+  --cards-shadow-color: rgba(0, 0, 0, 0.2);
 }
