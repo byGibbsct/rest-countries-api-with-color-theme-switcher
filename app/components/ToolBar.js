@@ -1,14 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import { useContext } from "react";
+import { AppContext } from "../contexts/appContext";
 
 export default function ToolBar() {
   const [isHidden, setIsHidden] = useState(true);
-  const [selectedRegion, setSelectedRegion] = useState("Filter by Region");
+  const { selectedRegion, setSelectedRegion, inputSearch, setInputSearch } = useContext(AppContext); 
 
   function updateRegion(event) {
-    setSelectedRegion(event.target.innerText);
+    setSelectedRegion(pv => {
+      if(pv == event.target.innerText) {
+        return "Filter by Region";
+      } else {
+        return event.target.innerText
+      }
+    });
     setIsHidden(pv => !pv)
+  }
+
+  function updateInput(event) {
+    setInputSearch(() => event.target.value);
   }
 
   return (
@@ -17,7 +29,7 @@ export default function ToolBar() {
         <svg className="search__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
         </svg>
-        <input className="search__input" type="text" placeholder="Search for a country..." />
+        <input className="search__input" type="text" value={inputSearch} onChange={updateInput} placeholder="Search for a country..." />
       </div>
       <div className="filter">
         <div className="filter__region-selector" onClick={() => setIsHidden(pv => !pv)}>
@@ -29,7 +41,7 @@ export default function ToolBar() {
         <div className={`filter__region-options ${isHidden && "hidden"}`}>
           <ul className="region-options__list">
             <li onClick={(e) => updateRegion(e)}>Africa</li>
-            <li onClick={(e) => updateRegion(e)}>America</li>
+            <li onClick={(e) => updateRegion(e)}>Americas</li>
             <li onClick={(e) => updateRegion(e)}>Asia</li>
             <li onClick={(e) => updateRegion(e)}>Europe</li>
             <li onClick={(e) => updateRegion(e)}>Oceania</li>
