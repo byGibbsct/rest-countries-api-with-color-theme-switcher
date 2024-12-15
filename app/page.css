@@ -181,6 +181,7 @@ a {
 .panel__back-btn a {
   color: var(--text-color);
   display: flex;
+  align-items: center;
   gap: 12px;
   text-decoration: none;
 }
