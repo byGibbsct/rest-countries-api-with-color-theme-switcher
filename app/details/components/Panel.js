@@ -3,6 +3,7 @@ import { getCurrencies, getLanguages } from "@/app/utils";
 import rawData from "@/app/data.json";
 
 import BorderCountries from "./BorderCountries";
+import Link from "next/link";
 
 export default function Panel({ queryCountry }) {
   const [countryData] = rawData.filter(entry => entry.name == queryCountry);
@@ -20,12 +21,12 @@ export default function Panel({ queryCountry }) {
     <article>
       <div className="panel">
         <div className="panel__back-btn">
-          <a href="/">
+          <Link href="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
             </svg>
             <p>Back</p>
-          </a>
+          </Link>
         </div>
         <div className="panel__country">
           <img className="panel__country-flag" src={countryData.flags.svg} alt="belgium flag" />

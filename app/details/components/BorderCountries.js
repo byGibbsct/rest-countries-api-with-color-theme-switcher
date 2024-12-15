@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function BorderCountries({ countryBorders }) {
 
   return(
@@ -9,7 +11,7 @@ export default function BorderCountries({ countryBorders }) {
         {
           countryBorders.map((country, i) => {
             return(
-              <li key={i}><a href={`/details/${country}`}>{country}</a></li>
+              <li key={i}><Link href={`/details/${country}`}>{country}</Link></li>
             );
           })
         }

@@ -1,8 +1,9 @@
+import Link from "next/link";
 
 export default function CountryCard(props) {
   return (
     <article className="card">
-      <a href={`/details/${props.name}`}>
+      <Link href={`/details/${props.name}`}>
         <img className="card__flag" src={props.flagUrl} alt={`${props.name} flag`}/>
         <div className="card__country-details">
           <h2 className="card__country-name">{props.name}</h2>
@@ -12,7 +13,7 @@ export default function CountryCard(props) {
             <p className="country-info__data"><span>Capital:</span> {props.capital}</p>
           </div>
         </div>
-      </a>
+      </Link>
     </article>
   );
 }
