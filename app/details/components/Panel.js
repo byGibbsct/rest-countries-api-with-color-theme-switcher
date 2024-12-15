@@ -1,22 +1,12 @@
+import { getCurrencies, getLanguages } from "@/app/utils";
+
 import rawData from "@/app/data.json";
 
 export default function Panel({ queryCountry }) {
   const [countryData] = rawData.filter(entry => entry.name == queryCountry);
 
-  function getCurrencies() {
-    let currenciesArray = [];
-    countryData.currencies.forEach(newCurrency => currenciesArray.push(newCurrency.name));
-    return currenciesArray.join(", ");
-  }
-
-  function getLanguages() {
-    let langArray = [];
-    countryData.languages.forEach(newLang => langArray.push(newLang.name));
-    return langArray.join(", ");
-  }
-
-  const currencies = getCurrencies();
-  const languages = getLanguages();
+  const currencies = getCurrencies(countryData);
+  const languages = getLanguages(countryData);
 
   return (
     <article>
