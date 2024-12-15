@@ -28,7 +28,7 @@ export default function Panel({ queryCountry }) {
           </Link>
         </div>
         <div className="panel__country">
-          <img className="panel__country-flag" src={countryData.flags.svg} alt="belgium flag" />
+          <img className="panel__country-flag" src={countryData.flags.svg} alt={`${countryData.name} flag`} />
           <div className="panel__country-info">
             <h2 className="country-info__name">{countryData.name}</h2>
             <div className="country-info__geography">
