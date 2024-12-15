@@ -2,12 +2,20 @@ import { getCurrencies, getLanguages } from "@/app/utils";
 
 import rawData from "@/app/data.json";
 
+import BorderCountries from "./BorderCountries";
+
 export default function Panel({ queryCountry }) {
   const [countryData] = rawData.filter(entry => entry.name == queryCountry);
 
   const currencies = getCurrencies(countryData);
   const languages = getLanguages(countryData);
 
+  const alphaCodesList = [];
+  countryData.borders.forEach((countryCode) => {
+    const [countryMatch] = rawData.filter(entry => entry.alpha3Code == countryCode);
+    alphaCodesList.push(countryMatch.name);
+  });
+  
   return (
     <article>
       <div className="panel">
@@ -35,14 +43,9 @@ export default function Panel({ queryCountry }) {
               <p><span>Currencies: </span>{currencies}</p>
               <p><span>Languages: </span>{languages}</p>
             </div>
-            <div className="country-info__border-countries">
-              <h3 className="border-countires__heading">Border Countries:</h3>
-              <ul className="border-countries__list">
-                <li><a href="/details/France">France</a></li>
-                <li><a href="/details/Germany">Germany</a></li>
-                <li><a href="/details/Netherlands">Netherlands</a></li>
-              </ul>
-            </div>
+            <BorderCountries
+              countryBorders={alphaCodesList}
+            />
           </div>
         </div>
       </div>
