@@ -1,12 +1,11 @@
-import { getCurrencies, getLanguages } from "@/app/utils";
-
 import rawData from "@/app/data.json";
 
-import BorderCountries from "./BorderCountries";
 import Link from "next/link";
+import BorderCountries from "./BorderCountries";
+import { getCurrencies, getLanguages } from "@/app/utils";
 
 export default function Panel({ queryCountry }) {
-  const [countryData] = rawData.filter(entry => entry.name == queryCountry);
+  const [ countryData ] = rawData.filter(entry => entry.name == queryCountry);
 
   const currencies = getCurrencies(countryData);
   const languages = getLanguages(countryData);

@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { AppContext } from "../contexts/appContext";
 
 export default function ToolBar() {
-  const [isHidden, setIsHidden] = useState(true);
+  const [ isHidden, setIsHidden ] = useState(true);
   const { selectedRegion, setSelectedRegion, inputSearch, setInputSearch } = useContext(AppContext); 
 
   function updateRegion(event) {
