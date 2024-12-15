@@ -191,30 +191,29 @@ a {
 }
 
 .panel__country-flag {
-  min-width: 560px;
-  max-height: 400px
+  object-fit: cover;
+  width: 560px;
+  height: 400px;
 }
 
 .panel__country-info {
   display: grid;
-  grid-template: max-content 32px max-content 75px max-content  / auto auto;
+  grid-template: max-content 32px max-content 75px max-content  / repeat(2, 1fr);
   column-gap: 115px;
-  padding: 50px 0;
+  padding: 50px 0 0;
 }
 
 .country-info__name {
   font-size: 30px;
   font-weight: 900;
-  grid-row: 1;
-  grid-column: span 2;
+  grid-area: 1 / span 2;
 }
 
 .country-info__geography {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  grid-row: 3;
-  grid-column: 1;
+  grid-area: 3 / 1;
 }
 
 .country-info__geography span {
@@ -225,16 +224,13 @@ a {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  grid-row: 3;
-  grid-column: 2;
+  grid-area: 3 / 2;
 }
 
 .country-info__border-countries {
   display: flex;
-  align-items: center;
   gap: 16px;
-  grid-row: 5;
-  grid-column: span 2;
+  grid-area: 5 / span 2;
 }
 
 .border-countires__heading {
@@ -244,8 +240,8 @@ a {
 
 .border-countries__list {
   display: grid;
-  gap: 10px;
   grid-template-columns: repeat(4, max-content);
+  gap: 10px;
   list-style: none;
   padding: 0;
 }
