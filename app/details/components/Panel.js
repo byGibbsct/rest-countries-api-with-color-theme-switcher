@@ -4,8 +4,8 @@ import Link from "next/link";
 import BorderCountries from "./BorderCountries";
 import { getCurrencies, getLanguages } from "@/app/utils";
 
-export default function Panel({ queryCountry }) {
-  const [ countryData ] = rawData.filter(entry => entry.name == queryCountry);
+export default async function Panel({ queryCountry }) {
+  const [ countryData ] = await rawData.filter(entry => entry.name == queryCountry);
 
   const currencies = getCurrencies(countryData);
   const languages = getLanguages(countryData);
