@@ -10,7 +10,7 @@ export default async function CountryPage( { params }) {
     <>
       <NavBar />
       <main>
-        <Panel queryCountry={queryCountry} />
+        <Panel queryCountry={decodeURI(queryCountry)} />
       </main>
     </>
   );

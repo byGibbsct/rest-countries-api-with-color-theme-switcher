@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CountryCard(props) {
   return (
     <article className="card">
-      <Link href={`/details/${props.name}`}>
+      <Link href={`/details/${encodeURI(props.name)}`}>
         <img className="card__flag" src={props.flagUrl} alt={`${props.name} flag`}/>
         <div className="card__country-details">
           <h2 className="card__country-name">{props.name}</h2>
