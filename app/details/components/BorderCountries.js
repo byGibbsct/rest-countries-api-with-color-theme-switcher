@@ -10,8 +10,9 @@ export default function BorderCountries({ countryBorders }) {
       <ul className="border-countries__list">
         {
           countryBorders.map((country, i) => {
+            const countrySimpleName = country.split(" ")[0];
             return(
-              <li key={i}><Link href={`/details/${country}`}>{country}</Link></li>
+              <li key={i}><Link href={`/details/${country}`}>{countrySimpleName}</Link></li>
             );
           })
         }
