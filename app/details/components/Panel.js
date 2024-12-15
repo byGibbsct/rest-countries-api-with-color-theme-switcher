@@ -11,7 +11,7 @@ export default function Panel({ queryCountry }) {
   const languages = getLanguages(countryData);
 
   const alphaCodesList = [];
-  countryData.borders.forEach((countryCode) => {
+  countryData.borders?.forEach((countryCode) => {
     const [countryMatch] = rawData.filter(entry => entry.alpha3Code == countryCode);
     alphaCodesList.push(countryMatch.name);
   });
