@@ -247,7 +247,7 @@ a {
 .border-countries__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 105px);
-  gap: 10px;
+  gap: 8px;
   list-style: none;
   font-weight: 300;
   padding: 0;
