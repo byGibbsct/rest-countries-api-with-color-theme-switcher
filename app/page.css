@@ -22,15 +22,16 @@ a {
 }
 
 .navbar__theme-switcher {
-  color: inherit;
-  cursor: pointer;
   background: transparent;
   border: none;
+  color: inherit;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   font-size: inherit;
+  padding: 0;
 }
 
 .theme-switcher__text {
@@ -261,4 +262,113 @@ a {
 .border-countries__list a {
   display: block;
   font-size: 14px;
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar {
+    padding: 35px 16px;
+  }
+
+  .navbar__heading {
+    font-size: 14px;
+  }
+
+  .navbar__theme-switcher {
+    gap: 6px;
+  }
+
+  .theme-switcher__icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .theme-switcher__text {
+    font-size: 12px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 32px 16px;
+  }
+
+  .toolbar__search {
+    padding: 16px 32px;
+    min-width: 100%;
+  }
+
+  .search__input {
+    width: 100%;
+  }
+
+  .filter {
+    max-width: 200px;
+  }
+
+  .filter__region-selector {
+    gap: 32px;
+    padding: 20px 25px;
+  }
+
+  .region-selector__text {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .filter__region-options {
+    top: 62px;
+  }
+
+  .display {
+    padding: 32px 56px;
+  }
+
+  .card {
+    width: 265px;
+  }
+
+  .panel {
+    gap: 70px;
+    padding: 70px 28px;
+  }
+
+  .panel__back-btn {
+    padding: 12px 25px;
+    gap: 10px;
+  }
+
+  .panel__country {
+    flex-direction: column;
+    gap: 62px;
+  }
+
+  .panel__country-flag {
+    width: 320px;
+    height: 230px;
+  }
+
+  .panel__country-info {
+    padding: 0;
+    grid-template: max-content 30px max-content 0px max-content 45px max-content / 1fr;
+  }
+
+  .country-info__name {
+    grid-area: 1 / 1;
+  }
+
+  .country-info__misc {
+    grid-area: 5 / 1;
+  }
+
+  .country-info__border-countries {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    grid-area: 7 / 1;
+  }
+
+  .border-countries__list {
+    grid-template-columns: repeat(3, max-content);
+  }
 }
