@@ -119,7 +119,7 @@ a {
 
 .display {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 264px);
+  grid-template-columns: repeat(auto-fit, 260px);
   gap: 75px;
   justify-content: space-between;
   padding: 50px 80px;
@@ -134,7 +134,7 @@ a {
 
 .card__flag {
   height: 160px;
-  width: 264px;
+  width: 260px;
   object-fit: cover;
 }
 
